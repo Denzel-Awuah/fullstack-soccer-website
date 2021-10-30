@@ -1,0 +1,29 @@
+<!-- Home Page -->
+<div class="container-fluid">
+	
+	   <!--Logo -->
+		<div  class="match-header ">
+      <div routerLink="/" routerLinkActive="active" class="match-tournament">
+          <img class="premlogo" src="https://assets.codepen.io/285131/pl-logo.svg" />
+           English Premier League
+      </div>
+    </div>
+    
+    <nav >
+      <ul class="thenav">
+         <li id="firstone"><a routerLink="/" routerLinkActive="active">Home</a></li>
+         <li><a routerLink="/matches" routerLinkActive="active">Previous Fixtures</a></li> 
+         <li><a routerLink="/upcominggames" routerLinkActive="active">Upcoming Fixtures</a></li>
+         <li><a routerLink="/topscorer" routerLinkActive="active">Top Scorers</a></li> 
+         <li><a routerLink="/leaguetable" routerLinkActive="active">League Table</a></li>
+         <li><a routerLink="/starred-players" routerLinkActive="active">⭐ Players</a></li>
+         <li id="lastone"><a routerLink="/starred-teams" routerLinkActive="active">⭐ Teams</a></li>
+      </ul>
+    </nav>
+
+   
+   <router-outlet></router-outlet>
+   
+   
+
+</div>

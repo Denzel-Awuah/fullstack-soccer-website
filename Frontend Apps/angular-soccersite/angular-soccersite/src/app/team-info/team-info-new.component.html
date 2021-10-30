@@ -1,0 +1,188 @@
+<button class="getbtn" (click)="getData()">GET DATA</button>
+<div *ngFor="let theTeam of teamInfo" class="card">
+  <h2 style="text-align:center">Team Info</h2>
+  <img src={{theTeam.logo}} alt="John" class="text-center" style="width:100%">
+  <h1 class="teamName">{{theTeam.name}}</h1>
+  <p class="title">{{theTeam.venue_city}},&nbsp; {{theTeam.country}}</p>
+  <table>
+    <tr>
+      <td>Abbreviation:&nbsp;{{theTeam.code}}</td>
+    </tr>
+    <tr>
+      <td>Venue Name:&nbsp;{{theTeam.venue_name}}</td>
+    </tr>
+    <tr>
+      <td>Surface:&nbsp;{{theTeam.venue_surface}}</td>
+    </tr>
+    <tr>
+      <td>Venue Address:&nbsp;{{theTeam.venue_address}}</td>
+    </tr>
+    <tr>
+      <td>Capacity:&nbsp;{{theTeam.venue_capacity}}</td>
+    </tr>
+  </table>
+
+</div>
+  
+  <table class="table mt">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">&nbsp;</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">⭐</th>
+        <th scope="col">Age</th>
+        <th scope="col">Height</th>
+        <th scope="col">Nationality</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of finalTeamRoster"> 
+        <th scope="row" class="player-img-box"><img src={{player.player.photo}} alt="John" class="player-img"></th>
+        <td><h3 class="pdt-120">{{player.player.firstname}}</h3></td>
+        <td><h3 class="pdt-120">{{player.player.lastname}}</h3></td>
+        <td (click)="addToFavPlayers(player.player)">
+          <h3 class="pdt-120 tableStar" *ngIf="checkIfPlayerStar(player.starred); else showNotStarred">⭐</h3>
+          <ng-template #showNotStarred><button type="button" class="mt-120 fs-35 btn btn-primary">+</button></ng-template>
+        </td>
+        <td><h3 class="pdt-120">{{player.player.age}}</h3></td>
+        <td><h3 class="pdt-120">{{player.player.height}}</h3></td>
+        <td><h3 class="pdt-120">{{player.player.nationality}}</h3></td>
+        <td><button *ngIf="checkIfPlayerStar(player.starred); else showDelete"
+          (click)="onDeletePlayerFromFavs(player.player.id)" 
+          class="btn btn-danger mt-120 noStar" 
+          type="button">✖</button> 
+          <ng-template #showDelete><p></p></ng-template></td> 
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+  <!-- 
+
+Material Cards Designed especiall for Posts with an Image and Post Information, Along with social buttons.
+
+Responsive using flexbox.
+
+Pure CSS, No JS
+
+Images Used in Pen are Not Mine :
+
+They are of Creative Artist from Dribbble
+-Marko Stupic : https://dribbble.com/sweetness-every-day
+
+
+
+-->
+
+
+<div class="card-container">
+  <div class="card">
+    <div class="card-image"></div>
+    <div class="card-info">
+      <div class="card-title">Hie</div>
+      <div class="card-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis beatae nisi soluta ex animi aperiam iste voluptatem, voluptatibus impedit rem natus doloribus sed ullam provident sunt odit eaque excepturi modi.</div>
+    </div>
+    <div class="card-social">
+    <ul>
+      <li><i class="fa fa-comment-o" aria-hidden="true"></i>
+</li>
+      <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+      <li><i class="fa fa-share-alt" aria-hidden="true"></i>
+</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-image"></div>
+    <div class="card-info">
+      <div class="card-title">Hello</div>
+      <div class="card-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis beatae nisi soluta ex animi aperiam iste voluptatem, voluptatibus impedit rem natus doloribus sed ullam provident sunt odit eaque excepturi modi.</div>
+    </div>
+      <div class="card-social">
+    <ul>
+        <li><i class="fa fa-comment-o" aria-hidden="true"></i>
+</li>
+        <li><i class="fa fa-heart-o" aria-hidden="true"></i>
+</li>
+        <li><i class="fa fa-share-alt" aria-hidden="true"></i>
+</li>
+        </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-image"></div>
+    <div class="card-info">
+      <div class="card-title">How are you ?</div>
+      <div class="card-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis beatae nisi soluta ex animi aperiam iste voluptatem, voluptatibus impedit rem natus doloribus sed ullam provident sunt odit eaque excepturi modi.</div>
+    </div>
+    <div class="card-social">
+    <ul>
+      <li><i class="fa fa-comment-o" aria-hidden="true"></i>
+</li>
+      <li><i class="fa fa-heart-o" aria-hidden="true"></i>
+</li>
+      <li><i class="fa fa-share-alt" aria-hidden="true"></i>
+</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-image"></div>
+    <div class="card-info">
+      <div class="card-title">What's Up ?</div>
+      <div class="card-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis beatae nisi soluta ex animi aperiam iste voluptatem, voluptatibus impedit rem natus doloribus sed ullam provident sunt odit eaque excepturi modi.</div>
+    </div>
+    <div class="card-social">
+    <ul>
+      <li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
+      <li><i class="fa fa-heart-o" aria-hidden="true"></i>
+</li>
+      <li><i class="fa fa-share-alt" aria-hidden="true"></i>
+</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngFor="let theTeam of teamInfo" class="card">
+  <h2 style="text-align:center">Team Info</h2>
+  <img src={{theTeam.logo}} alt="John" class="text-center" style="width:100%">
+  <h1 class="teamName">{{theTeam.name}}</h1>
+  <p class="title">{{theTeam.venue_city}},&nbsp; {{theTeam.country}}</p>
+  <table>
+    <tr>
+      <td>Abbreviation:&nbsp;{{theTeam.code}}</td>
+    </tr>
+    <tr>
+      <td>Venue Name:&nbsp;{{theTeam.venue_name}}</td>
+    </tr>
+    <tr>
+      <td>Surface:&nbsp;{{theTeam.venue_surface}}</td>
+    </tr>
+    <tr>
+      <td>Venue Address:&nbsp;{{theTeam.venue_address}}</td>
+    </tr>
+    <tr>
+      <td>Capacity:&nbsp;{{theTeam.venue_capacity}}</td>
+    </tr>
+  </table>
+
+</div>
+
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+
+.tsHeading{
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.headings{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.topscorerstable{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    border: 3px groove rgb(70, 5, 131);
+    margin-bottom: 40px;
+}
+
+.scorersHeader{
+    background-color: rgb(70, 5, 131);
+    color: white;
+}
+
+.scorers{
+    cursor: pointer;
+}
+
+.pb{
+    padding-bottom: 100px;
+}
+
+.scorers:hover{
+    color: blue;
+    font-weight: 500;
+}
+
+td:nth-child(1) {
+    padding-left: 10px;
+  }
+
+  .tableArea{
+	margin: 140px;
+  }
+
+  
+.getbtn{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.getbtn:hover{
+	background-color:black;
+	color:yellow;
+}

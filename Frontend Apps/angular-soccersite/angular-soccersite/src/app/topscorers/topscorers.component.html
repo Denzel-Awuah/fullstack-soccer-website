@@ -1,0 +1,18 @@
+<div class="animate__animated animate__fadeInRight">
+  <h3 class="headings tsHeading">Top Scorers</h3>
+  <!-- <button class="getbtn" (click)="getData()">GET DATA</button> -->
+    <table class="topscorerstable table table-hover">
+      <tr class="scorersHeader">
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Goals</th>
+      </tr>
+      <tr  *ngFor="let player of scorersdata;let i = index">
+        <td>{{i+1}}</td>
+        <td class="scorers">{{player.firstname}}&nbsp;{{player.lastname}}</td>
+        <td>{{player.goals.total}}</td>
+      </tr>
+     
+    </table>
+</div> 
+<div class="pb"></div>

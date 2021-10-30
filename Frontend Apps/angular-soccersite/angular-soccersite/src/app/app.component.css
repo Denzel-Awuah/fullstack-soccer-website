@@ -1,0 +1,385 @@
+
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+:root {
+	--color-text-primary: #1c2a38;
+	--color-text-secondary: #8A8F98;
+	--color-text-alert: #d72641;
+	--color-text-icon: #dbdade;
+	--color-bg-primary: #fff;
+	--color-bg-secondary: #f3f5f9;
+	--color-bg-alert: #fdeaec;
+	--color-theme-primary: #623ce6;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+.theHeading{
+	font-weight: 700;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+img {
+	display: block;
+}
+
+strong {
+	font-weight: 600;
+}
+
+
+body {
+	font-family: "Inter", sans-serif;
+	line-height: 1.5;
+	color: var(--color-text-primary);
+	background-color: var(--color-bg-secondary);
+}
+
+.pdt{
+    padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+.match {
+	background-color: var(--color-bg-primary);
+	display: flex;
+	flex-direction: column;
+	min-width: 600px;
+	border-radius: 10px;
+	box-shadow: 0 0 2px 0 rgba(#303030, 0.1), 0 4px 4px 0 rgba(#303030, 0.1);
+}
+
+.match-header {
+	display: flex;
+	border-bottom: 2px solid rgba(#303030, 0.1);
+	padding: 16px;
+}
+
+.getbtn{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.getbtn:hover{
+	background-color:black;
+	color:yellow;
+}
+
+.match-status {
+	background-color: var(--color-bg-alert);
+	color: var(--color-text-alert);
+	padding: 8px 12px;
+	border-radius: 6px;
+	font-weight: 600;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	line-height: 1;
+	margin-right: auto;
+
+}
+
+.match-tournament {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	font-weight: 700;
+	font-size: 24px;
+	cursor: pointer;
+	
+}
+.match-tournament img {
+		width: 85px;
+        align-items: center;
+        justify-content: center;
+	}
+
+
+.match-actions {
+	display: flex;
+	margin-left: auto;
+}
+
+.btn-icon {
+	border: 0;
+	background-color: transparent;
+	color: var(--color-text-icon);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.match-content {
+	display: flex;
+	position: relative;
+}
+
+.column {
+	padding: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% / 3);
+}
+
+.team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2em;
+}
+
+.team-logo {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 3px;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: var(--color-bg-primary);
+	box-shadow: 0 4px 4px 0 rgba(#303030, 0.15),
+		0 0 0 15px var(--color-bg-secondary);
+	
+}
+
+p{
+	margin-bottom: 0px;;
+}
+
+
+
+img {
+		width: 80px;
+		height: 80px;
+		
+    }
+    
+
+.team-name {
+	text-align: center;
+	margin-top: 1px;
+	font-size: 20px;
+	font-weight: 480;
+	cursor: pointer;
+}
+
+.team-name:hover{
+	color: blue;
+	font-weight: 800;
+}
+
+.match-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.match-date, .match-referee {
+    display: block;
+    font-size: 19px;
+    width: 170px;
+	color: var(--color-text-secondary);
+	text-align: center;
+}
+
+    
+
+.match-score {
+	margin-top: 12px;
+	display: flex;
+	align-items: center;
+}
+
+.match-score-number {
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1;
+	
+}
+
+.match-score-divider {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1;
+	color: var(--color-text-icon);
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+.match-referee {
+    margin-top: 12px;
+	margin-bottom: 30px;
+	width: 250px;
+	text-align: center;
+}
+
+.headings{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+td:nth-child(1) {
+    padding-left: 10px;
+  }
+
+
+
+  .scorersHeader{
+    background-color: rgb(70, 5, 131);
+    color: white;
+}
+
+.leagueTable{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 3px groove rgb(70, 5, 131);
+  }
+
+  .leagueTable tr{
+	
+  }
+
+
+  .tableArea{
+	margin: 140px;
+  }
+
+  .leagueHeading{
+	  text-align: center;
+	  font-weight: 700;
+  }
+
+  .appScorers{
+	  width: 100%;
+	  height: 100%;
+  }
+
+  .teamName{
+	cursor: pointer;
+    width: 20%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.teamName:hover{
+    color: blue;
+    font-weight: 500;
+}
+
+.tableStar{
+	font-size: 15px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.tableStar:hover{
+	font-size: 30px;
+	transition: 0.3s;
+}
+
+.teamName p{
+display: inline-block;
+padding-left: 30px;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.tableImg{
+	margin: 0 auto;
+	display: inline-block;
+}
+
+/* ----- Nav Bar ---- */
+
+
+nav ul{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+	
+}
+
+nav li {
+	list-style: none;
+	display: table-cell;
+	vertical-align: middle;
+	background: rgb(70, 5, 131);
+	
+  }
+
+  .pb{
+	  padding-bottom: 100px;
+  }
+
+  nav li:nth-last-child(n+6), 
+nav li:nth-last-child(n+6) ~ * {
+  display: inline-block;
+ 
+}
+
+nav li:nth-last-child(n+6) a, 
+nav li:nth-last-child(n+6) ~ * a {
+  display: inline-block;
+
+}
+
+ul li{
+	
+	overflow: hidden;
+}
+
+  nav a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	padding: 0.75em 1em;
+	font-size: 1.25em;
+  }
+
+nav a:focus {
+	color: #462997;
+	background-color: #2f971d;
+	font-weight: 550;
+  } 
+   nav a:hover{
+	color: #cbce1f;
+   }
+
+
+   #firstone{
+	border-top-left-radius:15px;
+	border-bottom-left-radius:15px;
+   }
+
+   #lastone{
+	border-top-right-radius:15px;
+	border-bottom-right-radius:15px;
+   }
+
+   
