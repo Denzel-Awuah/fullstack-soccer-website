@@ -9,4 +9,4 @@ View statistics from Teams and Players in the EPL
 <br />
 
 ## Deployment Strategy
-![Application](./project_diagram.png)
+![Application](./microservice_architecture.drawio.png)
