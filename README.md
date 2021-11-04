@@ -8,5 +8,5 @@ View statistics from Teams and Players in the EPL
 
 <br />
 
-## Deployment Architecture 
+## Deployment Strategy
 ![Application](./project_diagram.png)
