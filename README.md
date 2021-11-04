@@ -8,9 +8,3 @@ View statistics from Teams and Players in the EPL
 <br />
 
 
-## Run Application (Windows)
-After cloninig, in root, run  
-
- 1. "mvnw clean install"
- 2. "spring-boot:run" or run jar file in target/
- 3. View application on port 8080
