@@ -1,0 +1,10 @@
+
+
+a9257a9721e9a498d9e94cfc33aafebc-1377003455.eu-west-1.elb.amazonaws.com
+http://a9257a9721e9a498d9e94cfc33aafebc-1377003455.eu-west-1.elb.amazonaws.com:8000
+
+
+
+http://a9257a9721e9a498d9e94cfc33aafebc-1377003455.eu-west-1.elb.amazonaws.com:8000/players
+http://a9257a9721e9a498d9e94cfc33aafebc-1377003455.eu-west-1.elb.amazonaws.com:8000/teams
+http://a9257a9721e9a498d9e94cfc33aafebc-1377003455.eu-west-1.elb.amazonaws.com:8000/players/test

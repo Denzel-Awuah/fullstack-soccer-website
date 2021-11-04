@@ -1,0 +1,63 @@
+
+.headings{
+    margin-top: 3em;
+    text-align: center;
+}
+
+.teamHeading{
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+
+.teamstable{
+    width: 50%;
+    height: 100%;
+    border: 3px groove rgb(70, 5, 131);
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius:  10px !important;
+}
+
+table td, th {
+    vertical-align: middle;
+}
+
+
+.getbtn{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.getbtn:hover{
+	background-color:black;
+	color:yellow;
+}
+
+.teamsHeader{
+    background-color: rgb(70, 5, 131);
+    color: white;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+a{
+    font-size: 23px;
+}
+
+.teamnames{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.teamnames:hover{
+    color: darkblue;
+    cursor:pointer;
+}

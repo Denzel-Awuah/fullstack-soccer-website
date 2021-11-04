@@ -1,0 +1,18 @@
+<div class="animate__animated animate__fadeInRight">
+  <h3 class="headings teamHeading">List of Your ⭐ Teams</h3>
+  <!-- <button class="getbtn" (click)="getData()">GET DATA</button> -->
+   
+  <!-- Teams Table -->
+  <table class="teamstable table">
+      <tr class="teamsHeader">
+        <th><h5>Team</h5></th>
+        <th><h5>Name</h5></th>
+        <th><h5>Remove</h5></th>
+      </tr>
+      <tr  *ngFor="let team of teamsData">
+        <td> <img src={{team.photoLink}}></td>
+        <td><h5 class="teamnames" (click)="onTeamSelection(team.teamId)">{{team.teamName}}</h5></td>
+        <td><button (click)="onDeleteTeam(team.id)" type="button" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </table>
+</div> 

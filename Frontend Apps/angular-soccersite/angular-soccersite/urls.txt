@@ -1,0 +1,5 @@
+http://localhost:8081/thesaurus-api.1.0.0/api/test
+http://localhost:8081/thesaurus-api.1.0.0/api/hello
+
+a9071ce9e8eaa43ac97a309c795aeb3d-1830858741.eu-west-1.elb.amazonaws.com
+http://a9071ce9e8eaa43ac97a309c795aeb3d-1830858741.eu-west-1.elb.amazonaws.com:4200

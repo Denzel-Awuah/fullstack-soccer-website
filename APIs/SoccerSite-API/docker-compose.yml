@@ -1,0 +1,14 @@
+# Use denzel/123pass user/password credentials
+version: '3.1'
+
+services:
+
+  postgresdb:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: denzel
+      POSTGRES_PASSWORD: 123pass
+      POSTGRES_DB: soccersitedb
