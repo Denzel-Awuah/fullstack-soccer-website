@@ -8,23 +8,7 @@
 - Open CLI and run "npm install"
 - run "ng serve --o"
 
-<br/>
-<br/>
 
-## Home Page
- ![Application](/src/assets/home.png)
-
-<br/> 
-<br/> 
-
-## Previous Fixtures Component
-![Application](/src/assets/previous.png)
-
-<br/> 
-<br/> 
-
-## Top Scorers Component
-![Application](/src/assets/scorers.png)
 
 <br/> 
 <br/> 
