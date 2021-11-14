@@ -13,12 +13,13 @@ Deployed the microservices to a managed node group within a Kubernetes cluster w
 Microservices can communicate with the PostgreSQL database which was deployed to AWS RDS. 
 
 
-## App preview
-
-![Application](/frontend/angular-soccersite/src/assets/soccerapp.png)
-
-
-<br />
 
 ## Deployment Strategy
 ![Application](./microservice_architecture.drawio.png)
+
+<br />
+
+
+## App preview
+
+![Application](/frontend/angular-soccersite/src/assets/soccerapp.png)
