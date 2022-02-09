@@ -15,7 +15,7 @@ Microservices can communicate with the PostgreSQL database which was deployed to
 
 
 ## Deployment Strategy
-![Application](/microservice_architecture_ v2.drawio.png)
+![Application](./microservice_architecture_v2.drawio.png)
 
 <br />
 
