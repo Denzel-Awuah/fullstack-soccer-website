@@ -1,4 +1,4 @@
-# Use denzel/123pass user/password credentials
+# Use user/password credentials
 version: '3.1'
 
 services:
