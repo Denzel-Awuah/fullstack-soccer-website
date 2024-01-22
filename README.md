@@ -13,10 +13,6 @@ Deployed the microservices to a managed node group within a Kubernetes cluster w
 Microservices can communicate with the PostgreSQL database which was deployed to AWS RDS. 
 
 
-
-## Deployment Strategy
-![Application](/microservice_architecture_v2.drawio.png)
-
 <br />
 
 
