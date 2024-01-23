@@ -10,8 +10,6 @@ Containerized both frontend and backend microservices using Docker and deployed 
 
 Deployed the microservices to a managed node group within a Kubernetes cluster with autoscaling and load balancing configured
 
-Microservices can communicate with the PostgreSQL database which was deployed to AWS RDS. 
-
 
 <br />
 
