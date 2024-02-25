@@ -11,6 +11,10 @@ Containerized both frontend and backend microservices using Docker and deployed 
 Deployed the microservices to a managed node group within a Kubernetes cluster with autoscaling and load balancing configured
 
 
+
+## Deployment Strategy
+![Application](/microservice_architecture_v2.drawio.png)
+
 <br />
 
 
