@@ -25,6 +25,11 @@ public class PlayersController {
     }
 
 
+    @GetMapping("/{playerId}")
+    public Players GetPlayerById(@PathVariable long playerId){
+        return playersService.findById(playerId);
+    }
+
     @GetMapping
     public List<Players> PlayersTest() {
         return playersService.getAllPlayers();
