@@ -43,7 +43,6 @@ public class Players {
 	}
 
 
-
 	public Players(String firstName, String lastName, Integer age, String height, String nationality, String playerPic,
 			Long playerId) {
 		this.firstName = firstName;
@@ -126,14 +125,9 @@ public class Players {
 	}
 
 
-
-
-
-
 	public String getPlayerPic() {
 		return playerPic;
 	}
-
 
 
 	public void setPlayerPic(String playerPic) {
@@ -147,7 +141,5 @@ public class Players {
 				+ ", height=" + height + ", nationality=" + nationality + ", playerPic=" + playerPic + ", playerId="
 				+ playerId + "]";
 	}
-	
 
-	
 }
