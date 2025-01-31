@@ -11,77 +11,72 @@ import javax.persistence.Table;
 @Entity
 @Table
 public class Teams {
-	
-	@Id
-	@SequenceGenerator(
-			name =  "teams_sequence",
-			sequenceName = "teams_sequence",
-			allocationSize = 1)
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
-	private String teamName;
-	private String photoLink;
-	private String teamId;
-	
-	
-	public Teams() {}
-	
-	
-	public Teams(Long id, String teamName, String photoLink, String teamId) {
-		this.id = id;
-		this.teamName = teamName;
-		this.photoLink = photoLink;
-		this.teamId = teamId;
-	}
 
-	public Teams(String teamName, String photoLink, String teamId) {
-		this.teamName = teamName;
-		this.photoLink = photoLink;
-		this.teamId = teamId;
-	}
+    @Id
+    @SequenceGenerator(
+            name = "teams_sequence",
+            sequenceName = "teams_sequence",
+            allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String teamName;
+    private String photoLink;
+    private String teamId;
 
-	public Long getId() {
-		return id;
-	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Teams() {
+    }
 
-	public String getTeamName() {
-		return teamName;
-	}
 
-	public void setTeamName(String teamName) {
-		this.teamName = teamName;
-	}
+    public Teams(Long id, String teamName, String photoLink, String teamId) {
+        this.id = id;
+        this.teamName = teamName;
+        this.photoLink = photoLink;
+        this.teamId = teamId;
+    }
 
-	public String getPhotoLink() {
-		return photoLink;
-	}
+    public Teams(String teamName, String photoLink, String teamId) {
+        this.teamName = teamName;
+        this.photoLink = photoLink;
+        this.teamId = teamId;
+    }
 
-	public void setPhotoLink(String photoLink) {
-		this.photoLink = photoLink;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getTeamId() {
-		return teamId;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setTeamId(String teamId) {
-		this.teamId = teamId;
-	}
+    public String getTeamName() {
+        return teamName;
+    }
 
-	@Override
-	public String toString() {
-		return "Teams [id=" + id + ", teamName=" + teamName + ", photoLink=" + photoLink + ", teamId=" + teamId + "]";
-	}
-	
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
 
-	
-	
-	
-	
-	
-	
+    public String getPhotoLink() {
+        return photoLink;
+    }
+
+    public void setPhotoLink(String photoLink) {
+        this.photoLink = photoLink;
+    }
+
+    public String getTeamId() {
+        return teamId;
+    }
+
+    public void setTeamId(String teamId) {
+        this.teamId = teamId;
+    }
+
+    @Override
+    public String toString() {
+        return "Teams [id=" + id + ", teamName=" + teamName + ", photoLink=" + photoLink + ", teamId=" + teamId + "]";
+    }
+
+
 }

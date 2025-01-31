@@ -20,55 +20,54 @@ import net.bytebuddy.dynamic.loading.PackageDefinitionStrategy.Definition.Undefi
 @CrossOrigin(origins = "*")
 public class TeamsController {
 
-	private final TeamsService teamsService;
-	
-	@Autowired
-	public TeamsController(TeamsService theTeamsService) {
-		teamsService = theTeamsService;
-	}
-	
-	
-	@GetMapping
-	public List<Teams> getAllTeams() {
-		return teamsService.getAllTeams();
-	}
-	
-	@PostMapping
-	public void addNewTeam(@RequestBody Teams team) {
-		
+    private final TeamsService teamsService;
 
-		teamsService.addNewTeam(team);
-	}
-	
-	@DeleteMapping("/{teamId}")
-	public String removeTeam(@PathVariable Long teamId) {
-		
+    @Autowired
+    public TeamsController(TeamsService theTeamsService) {
+        teamsService = theTeamsService;
+    }
 
-		Teams tempTeam = teamsService.findById(teamId);
-		
-		// throw exception if null
-		
-		if (tempTeam == null) {
-			throw new RuntimeException("Employee id not found - " + teamId);
-		}
-		
-		teamsService.deleteById(teamId);
-		
-		return "Deleted employee id - " + teamId;
-	}
-	
-	
-	
-	@GetMapping("/test")
-	public String test() {
-		return "TEST";
-	}
-	
-	
-	@GetMapping("/hello")
-	public String hello() {
-		return "HI";
-	}
-	
-	
+
+    @GetMapping
+    public List<Teams> getAllTeams() {
+        return teamsService.getAllTeams();
+    }
+
+    @PostMapping
+    public void addNewTeam(@RequestBody Teams team) {
+
+
+        teamsService.addNewTeam(team);
+    }
+
+    @DeleteMapping("/{teamId}")
+    public String removeTeam(@PathVariable Long teamId) {
+
+
+        Teams tempTeam = teamsService.findById(teamId);
+
+        // throw exception if null
+
+        if (tempTeam == null) {
+            throw new RuntimeException("Employee id not found - " + teamId);
+        }
+
+        teamsService.deleteById(teamId);
+
+        return "Deleted employee id - " + teamId;
+    }
+
+
+    @GetMapping("/test")
+    public String test() {
+        return "TEST";
+    }
+
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "HI";
+    }
+
+
 }
