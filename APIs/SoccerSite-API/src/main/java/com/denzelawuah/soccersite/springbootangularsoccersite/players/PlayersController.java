@@ -1,8 +1,12 @@
 package com.denzelawuah.soccersite.springbootangularsoccersite.players;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,15 +28,14 @@ public class PlayersController {
         playersService = thePlayersService;
     }
 
-
-    @GetMapping("/{playerId}")
-    public Players GetPlayerById(@PathVariable long playerId){
-        return playersService.findById(playerId);
+    @GetMapping
+    public ResponseEntity<List<Players>> GetAllPlayers() {
+        return ResponseEntity.ok(playersService.getAllPlayers());
     }
 
-    @GetMapping
-    public List<Players> PlayersTest() {
-        return playersService.getAllPlayers();
+    @GetMapping("/{playerId}")
+    public ResponseEntity<Players> GetPlayerById(@PathVariable long playerId)  {
+        return ResponseEntity.ok(playersService.findById(playerId));
     }
 
 
