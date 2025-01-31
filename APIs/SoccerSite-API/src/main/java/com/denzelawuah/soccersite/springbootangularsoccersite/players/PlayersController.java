@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 public class PlayersController {
 
-
     private final PlayersService playersService;
 
     @Autowired
@@ -65,6 +64,5 @@ public class PlayersController {
     public String hello() {
         return "HI";
     }
-
 
 }
