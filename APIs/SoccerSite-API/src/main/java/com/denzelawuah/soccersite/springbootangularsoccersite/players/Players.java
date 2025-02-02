@@ -28,7 +28,6 @@ public class Players {
 	private Long playerId;
 	
 	public Players () {}
-	
 
 	public Players(Long id, String firstName, String lastName, Integer age, String height, String nationality,
 			String playerPic, Long playerId) {
