@@ -1,10 +1,7 @@
 package com.denzelawuah.soccersite.springbootangularsoccersite.players;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
