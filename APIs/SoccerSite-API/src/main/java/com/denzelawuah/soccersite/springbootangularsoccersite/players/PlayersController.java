@@ -3,15 +3,9 @@ package com.denzelawuah.soccersite.springbootangularsoccersite.players;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/players")
@@ -26,35 +20,31 @@ public class PlayersController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Players>> GetAllPlayers() {
+    public ResponseEntity<List<PlayersDto>> GetAllPlayers() {
         return ResponseEntity.ok(playersService.getAllPlayers());
     }
 
     @GetMapping("/{playerId}")
-    public ResponseEntity<Players> GetPlayerById(@PathVariable long playerId)  {
+    public ResponseEntity<PlayersDto> GetPlayerById(@PathVariable long playerId)  {
         return ResponseEntity.ok(playersService.findById(playerId));
     }
 
 
+    @PutMapping()
+    public ResponseEntity<PlayersDto> updatePlayer(@RequestBody PlayersDto playersDto){
+        return ResponseEntity.ok(playersService.updatePlayerById(playersDto));
+    }
+
     @PostMapping
-    public void addPlayer(@RequestBody Players thePlayer) {
-        playersService.addPlayer(thePlayer);
+    public ResponseEntity<PlayersDto> addPlayer(@RequestBody PlayersDto thePlayerDto) {
+        playersService.addPlayer(thePlayerDto);
+        return new ResponseEntity(thePlayerDto, HttpStatus.CREATED);
     }
 
 
     @DeleteMapping("/{playerId}")
     public String deletePlayer(@PathVariable Long playerId) {
-
-        //Get the player from the db by id
-        Players tempPlayer = playersService.findById(playerId);
-
-        // throw exception if null
-        if (tempPlayer == null) {
-            throw new RuntimeException("Player id not found - " + playerId);
-        }
-
         playersService.deleteById(playerId);
-
         return "Deleted Player id - " + playerId;
     }
 
