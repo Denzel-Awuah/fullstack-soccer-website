@@ -1,5 +1,8 @@
 package com.denzelawuah.soccersite.springbootangularsoccersite.players;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PlayersMapper {
 
     public PlayersDto MaptoDto(Players player){
