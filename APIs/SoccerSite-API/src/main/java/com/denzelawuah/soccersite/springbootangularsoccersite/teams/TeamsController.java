@@ -3,17 +3,9 @@ package com.denzelawuah.soccersite.springbootangularsoccersite.teams;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import net.bytebuddy.dynamic.loading.PackageDefinitionStrategy.Definition.Undefined;
-
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/teams")
@@ -29,31 +21,32 @@ public class TeamsController {
 
 
     @GetMapping
-    public List<Teams> getAllTeams() {
-        return teamsService.getAllTeams();
+    public ResponseEntity<List<TeamsDto>> getAllTeams() {
+        return ResponseEntity.ok(teamsService.getAllTeams());
     }
 
+
+    @GetMapping("{id}")
+    public ResponseEntity<TeamsDto> getTeamById(@PathVariable Long id){
+        TeamsDto teamsDto = teamsService.findById(id);
+        return ResponseEntity.ok(teamsDto);
+    }
+
+    @PutMapping
+    public ResponseEntity<TeamsDto> updateTeam(@RequestBody TeamsDto teamsDto){
+        TeamsDto updatedTeam = teamsService.updateTeam(teamsDto);
+        return ResponseEntity.ok(updatedTeam);
+    }
+
+
     @PostMapping
-    public void addNewTeam(@RequestBody Teams team) {
-
-
-        teamsService.addNewTeam(team);
+    public ResponseEntity<TeamsDto> addNewTeam(@RequestBody TeamsDto teamDto) {
+        return new ResponseEntity<TeamsDto>(teamsService.addNewTeam(teamDto), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{teamId}")
     public String removeTeam(@PathVariable Long teamId) {
-
-
-        Teams tempTeam = teamsService.findById(teamId);
-
-        // throw exception if null
-
-        if (tempTeam == null) {
-            throw new RuntimeException("Employee id not found - " + teamId);
-        }
-
         teamsService.deleteById(teamId);
-
         return "Deleted employee id - " + teamId;
     }
 
