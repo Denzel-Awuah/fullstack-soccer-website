@@ -38,7 +38,7 @@ public class PlayersController {
     @PostMapping
     public ResponseEntity<PlayersDto> addPlayer(@RequestBody PlayersDto thePlayerDto) {
         playersService.addPlayer(thePlayerDto);
-        return new ResponseEntity(thePlayerDto, HttpStatus.CREATED);
+        return new ResponseEntity<PlayersDto>(thePlayerDto, HttpStatus.CREATED);
     }
 
 
