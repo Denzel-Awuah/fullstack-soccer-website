@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserDetailsServiceImp implements UserDetailsService {
-
     private final UsersDAO _usersDAO;
 
     public UserDetailsServiceImp(UsersDAO usersDAO) {
