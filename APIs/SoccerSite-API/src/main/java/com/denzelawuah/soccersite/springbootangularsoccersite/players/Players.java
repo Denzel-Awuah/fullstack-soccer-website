@@ -128,7 +128,6 @@ public class Players {
 		this.playerPic = playerPic;
 	}
 
-
 	@Override
 	public String toString() {
 		return "Players [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age
