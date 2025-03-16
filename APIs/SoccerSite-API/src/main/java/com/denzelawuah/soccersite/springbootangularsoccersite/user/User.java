@@ -8,7 +8,7 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "userTable")
-public class User implements UserDetails {
+public class  User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,9 @@ public class User implements UserDetails {
     private String password;
 
 
-    public User() {}
+    public User() {
+
+    }
 
     public User(Integer id, String firstName, String lastName, String username, String password) {
         this.id = id;
