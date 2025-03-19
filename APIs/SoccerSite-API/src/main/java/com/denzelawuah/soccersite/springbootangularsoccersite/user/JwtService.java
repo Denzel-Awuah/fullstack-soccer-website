@@ -16,8 +16,7 @@ import java.util.function.Function;
 public class JwtService {
 
     private final String SECRET_KEY = "158b67be0e4d7979e2b8e4638abfbe4ea19d9cbf05133d5787894e212c5ca13c";
-
-
+    
     public boolean isValid(String token, User user){
         String username = extractUsername(token);
         return (username.equals(user.getUsername()) && !isTokenExpired(token));
